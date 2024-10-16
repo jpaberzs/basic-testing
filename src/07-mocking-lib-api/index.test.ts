@@ -38,12 +38,7 @@ describe('throttledGetDataFromApi', () => {
 
   test('should perform request to correct provided url', async () => {
     const relativePath = '/todos/1';
-    const responseData = {
-      userId: 1,
-      id: 1,
-      title: 'delectus aut autem',
-      completed: false,
-    };
+    const responseData = { id: 1, title: 'test title' };
 
     mockedAxios.create.mockReturnThis();
     mockedAxios.get.mockResolvedValue({ data: responseData });
